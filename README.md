@@ -15,7 +15,7 @@ Even after power loss, the ESP32 automatically reloads schedules from memory, an
 - **Accurate timekeeping**: DS3231 RTC keeps the correct date and time.
 - **NTP sync**: Sync RTC with internet time when needed.
 - **Manual trigger**: Button on the dashboard to ring the bell instantly.
-- **Automatic operation**: Bell rings for 5 seconds at scheduled times, then turns off.
+- **Automatic operation**: Bell rings for 20 seconds at scheduled times, then turns off.
 - **Web interface**: Modern UI with HTML, CSS, and JavaScript (served directly from ESP32).
 - **Serial Monitor logs**: Every action is logged for debugging.
 
@@ -66,7 +66,7 @@ Even after power loss, the ESP32 automatically reloads schedules from memory, an
 2. Every second:
    - Compares current time with the schedule for the day.
    - If a match is found:
-     - Relay is activated for 5 seconds to ring the bell.
+     - Relay is activated for 20 seconds to ring the bell.
      - Relay turns off automatically.
 3. Web dashboard:
    - Displays current time/date.
@@ -106,7 +106,7 @@ The dashboard is a **single-page application** served from ESP32, with:
 - **Schedule Test**:
   1. Set a time a few minutes ahead in today’s schedule.
   2. Wait until the scheduled time.
-  3. Bell rings for 5 seconds.
+  3. Bell rings for 20 seconds.
   4. Serial Monitor logs:
      ```
      Bell ON (Day X, Time HH:MM)
